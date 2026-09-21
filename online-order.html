@@ -1,14 +1,69 @@
-var message =
-    "नमस्ते Manish Digital Seva & AI Center,%0A%0A" +
-    "नाम: " + name + "%0A" +
-    "मोबाइल: " + mobile + "%0A" +
-    "काम: " + service + "%0A" +
-    "जानकारी: " + details;
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ऑनलाइन काम - Manish Digital Seva</title>
+<style>
+body{font-family:Arial;margin:0;background:#f2f6fb}
+header{background:#087fdb;color:white;text-align:center;padding:25px 10px}
+.box{background:white;margin:20px auto;padding:20px;max-width:500px;border-radius:15px}
+input,select,textarea{width:100%;padding:12px;margin:8px 0 15px;box-sizing:border-box;border:1px solid #ccc;border-radius:8px}
+button{width:100%;padding:14px;background:#19a957;color:white;border:0;border-radius:25px;font-size:17px}
+a{display:block;text-align:center;margin-top:20px;color:#087fdb}
+</style>
+</head>
 
-    window.open(
-        "https://wa.me/916260988021?text=" + message,
-        "_blank"
-    );
+<body>
+
+<header>
+<h2>MANISH DIGITAL SEVA & AI CENTER</h2>
+<p>📲 ऑनलाइन काम भेजें</p>
+</header>
+
+<div class="box">
+<h2>अपना काम भेजें</h2>
+
+<input id="name" placeholder="आपका नाम">
+
+<input id="mobile" placeholder="मोबाइल नंबर">
+
+<select id="work">
+<option>ऑनलाइन फॉर्म</option>
+<option>प्रिंट / PDF</option>
+<option>रिज्यूमे / CV</option>
+<option>AI पोस्टर / बैनर</option>
+<option>फोटो डिजाइन</option>
+<option>वीडियो / Reel</option>
+<option>किसान सहायता</option>
+<option>अन्य काम</option>
+</select>
+
+<textarea id="detail" placeholder="काम की जानकारी लिखें"></textarea>
+
+<button onclick="send()">💬 WhatsApp पर भेजें</button>
+
+<a href="index.html">⬅️ मुख्य वेबसाइट पर वापस जाएँ</a>
+</div>
+
+<script>
+function send(){
+let n=document.getElementById("name").value;
+let m=document.getElementById("mobile").value;
+let w=document.getElementById("work").value;
+let d=document.getElementById("detail").value;
+
+if(!n || !m || !d){
+alert("कृपया सभी जानकारी भरें");
+return;
+}
+
+let msg="नमस्ते Manish Digital Seva%0Aनाम: "+n+
+"%0Aमोबाइल: "+m+
+"%0Aकाम: "+w+
+"%0Aजानकारी: "+d;
+
+window.open("https://wa.me/916260988021?text="+msg,"_blank");
 }
 </script>
 
