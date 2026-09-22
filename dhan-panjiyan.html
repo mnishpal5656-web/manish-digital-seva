@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>धान पंजीयन आवेदन - Manish Digital Seva</title>
 
 <style>
@@ -11,21 +12,25 @@ body{
   font-family:Arial,sans-serif;
   background:#f5f8f5;
 }
+
 .container{
   max-width:600px;
   margin:auto;
   padding:20px;
 }
+
 .box{
   background:white;
   padding:22px;
   border-radius:18px;
   box-shadow:0 2px 10px #ccc;
 }
+
 h1{
   color:#16803c;
   text-align:center;
 }
+
 .notice{
   background:#fff3cd;
   padding:14px;
@@ -33,11 +38,13 @@ h1{
   text-align:center;
   font-weight:bold;
 }
+
 label{
   display:block;
   margin-top:14px;
   font-weight:bold;
 }
+
 input,textarea,select{
   width:100%;
   padding:12px;
@@ -47,6 +54,7 @@ input,textarea,select{
   border-radius:10px;
   font-size:16px;
 }
+
 button{
   width:100%;
   padding:15px;
@@ -58,19 +66,72 @@ button{
   font-size:18px;
   font-weight:bold;
 }
+
+.qrbox{
+  background:#fff8e1;
+  padding:20px;
+  border-radius:18px;
+  text-align:center;
+  margin-top:22px;
+  border:2px solid #ffc107;
+}
+
+.qrbox img{
+  width:280px;
+  max-width:90%;
+  border-radius:10px;
+  margin-top:10px;
+}
+
+.paybutton{
+  display:block;
+  background:#25D366;
+  color:white;
+  padding:14px;
+  border-radius:30px;
+  text-decoration:none;
+  text-align:center;
+  font-size:18px;
+  font-weight:bold;
+  margin-top:15px;
+}
+
+.docbutton{
+  display:block;
+  background:#1976d2;
+  color:white;
+  padding:14px;
+  border-radius:30px;
+  text-decoration:none;
+  text-align:center;
+  font-size:18px;
+  font-weight:bold;
+  margin-top:15px;
+}
+
+.info{
+  background:#e8f5e9;
+  padding:15px;
+  border-radius:12px;
+  margin-top:20px;
+  line-height:1.6;
+}
+
+.warning{
+  background:#ffebee;
+  padding:14px;
+  border-radius:12px;
+  margin-top:15px;
+  color:#b71c1c;
+  font-weight:bold;
+}
+
 .back{
   display:block;
   text-align:center;
-  margin-top:18px;
+  margin-top:20px;
   color:#16803c;
   text-decoration:none;
-}
-.note{
-  background:#e8f5e9;
-  padding:12px;
-  border-radius:10px;
-  margin-top:18px;
-  font-size:14px;
 }
 </style>
 </head>
@@ -88,9 +149,13 @@ button{
 </div>
 
 <p>
-कृपया नीचे अपनी जानकारी भरें। जानकारी WhatsApp के माध्यम से
-MANISH DIGITAL SEVA & AI CENTER को भेजी जाएगी।
+कृपया नीचे अपनी जानकारी भरें। जानकारी
+<b>MANISH DIGITAL SEVA & AI CENTER</b>
+को WhatsApp के माध्यम से भेजी जाएगी।
 </p>
+
+
+<!-- किसान जानकारी -->
 
 <label>👤 किसान का नाम</label>
 <input id="name" type="text" placeholder="पूरा नाम">
@@ -127,22 +192,98 @@ placeholder="खतौनी नंबर / भूमि की जानका�
 <option>रायपुर सहकारी समिति</option>
 </select>
 
+
+<!-- ₹100 सेवा शुल्क और QR -->
+
+<div class="qrbox">
+
+<h2 style="color:#e65100;">
+💰 सेवा शुल्क ₹100
+</h2>
+
+<p>
+<b>MANISH DIGITAL SEVA & AI CENTER</b>
+</p>
+
+<p>
+📲 नीचे दिए PhonePe QR कोड को स्कैन करके
+<b>₹100 सेवा शुल्क</b> का भुगतान करें।
+</p>
+
+<img src="AccountQRCodeUnion Bank Of India - 6262_LIGHT_THEME.png"
+alt="PhonePe Payment QR Code">
+
+<p style="font-weight:bold;">
+✅ भुगतान के बाद Payment Screenshot WhatsApp पर भेजें।
+</p>
+
+<a class="paybutton"
+href="https://wa.me/916260988021?text=नमस्ते,%20मैंने%20धान%20पंजीयन%20के%20लिए%20₹100%20सेवा%20शुल्क%20का%20भुगतान%20कर%20दिया%20है।%20Payment%20Screenshot%20भेज%20रहा/रही%20हूँ।"
+target="_blank">
+📲 Payment Screenshot WhatsApp पर भेजें
+</a>
+
+</div>
+
+
+<!-- किसान के लिए सूचना -->
+
+<div class="info">
+
+<b>प्रिय किसान भाई,</b>
+
+<p>
+आपका आवेदन <b>MANISH DIGITAL SEVA & AI CENTER</b>
+के माध्यम से सफलतापूर्वक जमा किया जाएगा।
+</p>
+
+<p>
+आवेदन जमा होने के बाद आवश्यक
+<b>OTP Verification</b> तथा पंजीयन की
+<b>रसीद/पावती</b> की प्रक्रिया के लिए हमारी टीम
+आपसे WhatsApp/फोन के माध्यम से संपर्क करेगी।
+</p>
+
+</div>
+
+
+<div class="warning">
+
+⚠️ सुरक्षा सूचना:<br>
+OTP केवल अधिकृत प्रक्रिया के दौरान ही साझा करें।
+अपना OTP किसी अनजान व्यक्ति को न दें।
+
+</div>
+
+
+<!-- आवेदन WhatsApp -->
+
 <button onclick="sendWhatsApp()">
 📲 जानकारी WhatsApp पर भेजें
 </button>
 
-<div class="note">
-📎 आधार, समग्र ID, बैंक पासबुक और खतौनी की
-फोटो/PDF WhatsApp चैट में अलग से भेज सकते हैं।
+
+<!-- दस्तावेज -->
+
+<div class="info">
+
+📎 <b>आवश्यक दस्तावेज़</b>
+
+<p>
+आधार कार्ड, समग्र ID, बैंक पासबुक,
+खतौनी/भूमि संबंधी दस्तावेज़ की फोटो/PDF
+WhatsApp चैट में अलग से भेज सकते हैं।
+</p>
+
 </div>
-<a href="https://wa.me/916260988021?text=नमस्ते,%20मैं%20धान%20उपार्जन%20पंजीयन%20के%20लिए%20अपने%20दस्तावेज़%20भेजना%20चाहता/चाहती%20हूँ।"
-target="_blank"
-style="display:block;background:#25D366;color:white;padding:15px;border-radius:30px;text-decoration:none;text-align:center;font-size:18px;font-weight:bold;margin-top:15px;">
+
+<a class="docbutton"
+href="https://wa.me/916260988021?text=नमस्ते,%20मैं%20धान%20उपार्जन%20पंजीयन%20के%20लिए%20अपने%20दस्तावेज़%20भेजना%20चाहता/चाहती%20हूँ।"
+target="_blank">
 📎 दस्तावेज़ WhatsApp पर भेजें
 </a>
-📎 आधार, समग्र ID, बैंक पासबुक और खतौनी की
-फोटो/PDF WhatsApp चैट में अलग से भेज सकते हैं।
-</div>
+
+
 <a class="back" href="index.html">
 ⬅️ मुख्य वेबसाइट पर वापस जाएँ
 </a>
@@ -150,7 +291,9 @@ style="display:block;background:#25D366;color:white;padding:15px;border-radius:3
 </div>
 </div>
 
+
 <script>
+
 function sendWhatsApp(){
 
 let name=document.getElementById("name").value;
@@ -165,28 +308,34 @@ let village=document.getElementById("village").value;
 let samiti=document.getElementById("samiti").value;
 
 if(name=="" || mobile=="" || samiti==""){
+
 alert("कृपया किसान का नाम, मोबाइल नंबर और समिति भरें।");
+
 return;
 }
 
 let message =
-"🌾 खरीफ 2026-27 धान उपार्जन पंजीयन%0A%0A"+
-"👤 किसान का नाम: "+name+"%0A"+
-"📱 मोबाइल: "+mobile+"%0A"+
-"🪪 आधार: "+aadhaar+"%0A"+
-"🆔 समग्र ID: "+samagra+"%0A"+
-"🏦 बैंक A/C: "+account+"%0A"+
-"🏦 बैंक: "+bank+"%0A"+
-"📄 खसरा: "+khasra+"%0A"+
-"📋 खतौनी: "+khatoni+"%0A"+
-"🏘️ ग्राम: "+village+"%0A"+
-"🏢 समिति: "+samiti;
+"🌾 खरीफ 2026-27 धान उपार्जन पंजीयन\n\n"+
+"👤 किसान का नाम: "+name+"\n"+
+"📱 मोबाइल: "+mobile+"\n"+
+"🪪 आधार: "+aadhaar+"\n"+
+"🆔 समग्र ID: "+samagra+"\n"+
+"🏦 बैंक A/C: "+account+"\n"+
+"🏦 बैंक: "+bank+"\n"+
+"📄 खसरा: "+khasra+"\n"+
+"📋 खतौनी: "+khatoni+"\n"+
+"🏘️ ग्राम: "+village+"\n"+
+"🏢 समिति: "+samiti+"\n\n"+
+"💰 सेवा शुल्क: ₹100\n"+
+"📎 Payment Screenshot एवं दस्तावेज़ WhatsApp पर भेजे जाएंगे।";
 
 window.open(
-"https://wa.me/916260988021?text="+message,
+"https://wa.me/916260988021?text="+encodeURIComponent(message),
 "_blank"
 );
+
 }
+
 </script>
 
 </body>
