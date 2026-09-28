@@ -2,84 +2,195 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Manish Digital Seva & AI Center</title>
 
 <style>
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:Arial,sans-serif;
+}
+
 body{
- margin:0;
- font-family:Arial,"Noto Sans Devanagari",sans-serif;
- background:#f4f7fb;
- color:#172033
+  background:#f4f7fb;
+  color:#222;
 }
+
 header{
- background:linear-gradient(135deg,#0759c9,#10a6e8);
- color:white;
- text-align:center;
- padding:25px 15px
+  background:linear-gradient(135deg,#075e54,#128c7e);
+  color:white;
+  padding:22px 15px;
+  text-align:center;
 }
-header h1{margin:5px 0;font-size:28px}
-.container{max-width:1000px;margin:auto;padding:15px}
+
+header h1{
+  font-size:24px;
+  margin-bottom:8px;
+}
+
+header p{
+  font-size:14px;
+}
+
+nav{
+  background:white;
+  padding:10px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:8px;
+  box-shadow:0 2px 8px #ccc;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+button{
+  border:0;
+  padding:11px 16px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.navbtn{
+  background:#075e54;
+  color:white;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:18px;
+}
+
 .card{
- background:white;
- padding:20px;
- margin:15px 0;
- border-radius:18px;
- box-shadow:0 4px 15px #0001
+  background:white;
+  padding:20px;
+  margin:15px 0;
+  border-radius:14px;
+  box-shadow:0 3px 12px #ddd;
 }
-input,select,textarea{
- width:100%;
- padding:13px;
- margin:7px 0 12px;
- border:1px solid #ccc;
- border-radius:10px;
- font-size:16px
+
+.card h2{
+  color:#075e54;
+  margin-bottom:12px;
 }
-button,.btn{
- border:0;
- background:#0759c9;
- color:white;
- padding:13px 20px;
- border-radius:25px;
- font-weight:bold;
- cursor:pointer;
- text-decoration:none;
- display:inline-block;
- margin:5px
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:15px;
 }
-.green{background:#16a34a}
-.red{background:#dc2626}
-.orange{background:#f59e0b}
-.hidden{display:none}
-.services{
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
- gap:15px
-}
+
 .service{
- background:white;
- padding:20px;
- border-radius:15px;
- box-shadow:0 3px 12px #0001
+  background:white;
+  padding:18px;
+  border-radius:14px;
+  box-shadow:0 3px 10px #ddd;
+  text-align:center;
 }
-.service h3{color:#0759c9}
-.status{
- padding:8px 15px;
- border-radius:20px;
- display:inline-block;
- font-weight:bold
+
+.service h3{
+  color:#075e54;
+  margin-bottom:8px;
 }
-.pending{background:#fff3cd;color:#856404}
-.processing{background:#cfe2ff;color:#084298}
-.completed{background:#d1e7dd;color:#0f5132}
-.rejected{background:#f8d7da;color:#842029}
+
+input,select,textarea{
+  width:100%;
+  padding:12px;
+  margin:7px 0 12px;
+  border:1px solid #ccc;
+  border-radius:8px;
+  font-size:15px;
+}
+
+.primary{
+  background:#075e54;
+  color:white;
+}
+
+.success{
+  background:#198754;
+  color:white;
+}
+
+.warning{
+  background:#f0ad00;
+  color:white;
+}
+
+.danger{
+  background:#dc3545;
+  color:white;
+}
+
+.info{
+  background:#0d6efd;
+  color:white;
+}
+
+.hidden{
+  display:none!important;
+}
+
 .appbox{
- border-left:5px solid #0759c9;
- padding:15px;
- background:#f8fbff;
- margin:12px 0;
- border-radius:10px
+  border:1px solid #ddd;
+  border-radius:12px;
+  padding:15px;
+  margin:12px 0;
+  background:#fafafa;
+}
+
+.status{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:bold;
+  margin-top:7px;
+}
+
+.pending{
+  background:#fff3cd;
+  color:#856404;
+}
+
+.processing{
+  background:#cfe2ff;
+  color:#084298;
+}
+
+.completed{
+  background:#d1e7dd;
+  color:#0f5132;
+}
+
+.rejected{
+  background:#f8d7da;
+  color:#842029;
+}
+
+footer{
+  background:#075e54;
+  color:white;
+  text-align:center;
+  padding:20px;
+  margin-top:30px;
+}
+
+.small{
+  font-size:13px;
+  color:#666;
+}
+
+#message{
+  padding:10px;
+  margin:10px 0;
+  border-radius:8px;
+  display:none;
 }
 </style>
 </head>
@@ -87,46 +198,50 @@ button,.btn{
 <body>
 
 <header>
-<h1>MANISH DIGITAL SEVA & AI CENTER</h1>
-<p>आपके गाँव में डिजिटल, ऑनलाइन और AI सेवाएँ</p>
-<p>📍 ढखरा • तहसील त्योंथर • जिला रीवा</p>
+  <h1>MANISH DIGITAL SEVA & AI CENTER</h1>
+  <p>ढखरा | तहसील त्योंथर | जिला रीवा (म.प्र.)</p>
 </header>
+
+<nav>
+  <button class="navbtn" onclick="showSection('home')">🏠 होम</button>
+  <button class="navbtn" onclick="showSection('services')">🛠 सेवाएँ</button>
+  <button class="navbtn" onclick="showSection('register')">📝 रजिस्ट्रेशन</button>
+  <button class="navbtn" onclick="showSection('login')">🔐 लॉगिन</button>
+  <button class="navbtn hidden" id="dashboardBtn" onclick="showSection('dashboard')">👤 मेरा डैशबोर्ड</button>
+  <button class="navbtn hidden" id="adminBtn" onclick="showSection('admin')">⚙️ Admin</button>
+  <button class="navbtn hidden" id="logoutBtn" onclick="logoutUser()">🚪 Logout</button>
+</nav>
+
+<div id="message"></div>
 
 <div class="container">
 
 <!-- HOME -->
 <section id="home">
 
-<div class="card" style="text-align:center">
-<h2>🌐 Manish Digital Seva Portal</h2>
-<p>ऑनलाइन सेवाएँ और आवेदन अब एक ही जगह।</p>
-
-<button onclick="showPage('login')">🔐 Login</button>
-<button class="green" onclick="showPage('register')">
-👤 नया Account बनाएँ
-</button>
+<div class="card">
+  <h2>🙏 स्वागत है</h2>
+  <p>
+    Manish Digital Seva & AI Center पर विभिन्न ऑनलाइन सेवाएँ,
+    आवेदन एवं डिजिटल सहायता उपलब्ध है।
+  </p>
 </div>
 
-<div class="services">
+<div class="grid">
 
 <div class="service">
-<h3>💻 ऑनलाइन सेवाएँ</h3>
-<p>ऑनलाइन फॉर्म और डिजिटल आवेदन सहायता।</p>
-</div>
-
-<div class="service">
-<h3>🌾 किसान सेवाएँ</h3>
-<p>कृषि एवं किसान संबंधी ऑनलाइन सहायता।</p>
+<h3>📝 ऑनलाइन आवेदन</h3>
+<p>विभिन्न सरकारी एवं ऑनलाइन सेवाओं के आवेदन।</p>
 </div>
 
 <div class="service">
-<h3>📄 दस्तावेज सेवा</h3>
-<p>PDF, प्रिंट, स्कैन और दस्तावेज सहायता।</p>
+<h3>🌾 किसान सेवा</h3>
+<p>किसान संबंधी ऑनलाइन कार्य एवं पंजीयन सहायता।</p>
 </div>
 
 <div class="service">
-<h3>🤖 AI सेवा</h3>
-<p>पोस्टर, बैनर और डिजिटल डिजाइन।</p>
+<h3>🚽 SBM-G</h3>
+<p>शौचालय सहायता आवेदन भरने में मदद।</p>
 </div>
 
 <div class="service">
@@ -134,20 +249,69 @@ button,.btn{
 <p>खरीफ 2026-27 धान पंजीयन सहायता।</p>
 </div>
 
-<div class="service">
-<h3>🚽 SBM-G सहायता</h3>
-<p>शौचालय सहायता आवेदन की ऑनलाइन सहायता।</p>
-</div>
-
 </div>
 
 <div class="card">
-<h2>📞 संपर्क</h2>
-<p><b>Manish Pal</b></p>
-<p>📱 6260988021</p>
-<a class="btn green"
-href="https://wa.me/916260988021"
-target="_blank">WhatsApp करें</a>
+<h2>📲 संपर्क करें</h2>
+<p><b>मोबाइल / WhatsApp:</b> 6260988021</p>
+<br>
+<a href="https://wa.me/916260988021" target="_blank">
+<button class="success">WhatsApp करें</button>
+</a>
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section id="services" class="hidden">
+
+<div class="card">
+<h2>🛠 ऑनलाइन सेवाएँ</h2>
+
+<div class="grid">
+
+<div class="service">
+<h3>आवेदन सेवा</h3>
+<p>ऑनलाइन आवेदन भरने की सहायता</p>
+</div>
+
+<div class="service">
+<h3>आय प्रमाण पत्र</h3>
+<p>आय प्रमाण पत्र आवेदन</p>
+</div>
+
+<div class="service">
+<h3>जाति प्रमाण पत्र</h3>
+<p>जाति प्रमाण पत्र आवेदन</p>
+</div>
+
+<div class="service">
+<h3>निवास प्रमाण पत्र</h3>
+<p>निवास प्रमाण पत्र आवेदन</p>
+</div>
+
+<div class="service">
+<h3>किसान पंजीयन</h3>
+<p>किसान संबंधी ऑनलाइन कार्य</p>
+</div>
+
+<div class="service">
+<h3>समग्र KYC</h3>
+<p>समग्र संबंधी ऑनलाइन सहायता</p>
+</div>
+
+<div class="service">
+<h3>आधार सहायता</h3>
+<p>आधार संबंधी ऑनलाइन सेवाएँ</p>
+</div>
+
+<div class="service">
+<h3>पैन कार्ड</h3>
+<p>पैन कार्ड आवेदन सहायता</p>
+</div>
+
+</div>
 </div>
 
 </section>
@@ -157,33 +321,33 @@ target="_blank">WhatsApp करें</a>
 <section id="register" class="hidden">
 
 <div class="card">
+<h2>📝 नया User Registration</h2>
 
-<h2>👤 नया Account बनाएँ</h2>
+<form id="registerForm">
 
 <label>पूरा नाम</label>
-<input id="regName" type="text" placeholder="अपना नाम">
+<input type="text" id="regName" required>
 
 <label>मोबाइल नंबर</label>
-<input id="regMobile" type="tel" placeholder="मोबाइल नंबर">
+<input type="tel" id="regMobile" maxlength="10" required>
 
 <label>Email</label>
-<input id="regEmail" type="email" placeholder="Email">
+<input type="email" id="regEmail" required>
 
 <label>Password</label>
-<input id="regPassword" type="password" placeholder="कम से कम 6 अक्षर">
+<input type="password" id="regPassword" minlength="6" required>
 
-<button class="green" onclick="registerUser()">
-✅ Account बनाएँ
+<button class="primary" type="submit">
+रजिस्ट्रेशन करें
 </button>
 
-<button onclick="showPage('login')">
-पहले से Account है? Login
-</button>
+</form>
 
-<p id="registerMsg"></p>
+<p class="small">
+Password कम से कम 6 अक्षरों का रखें।
+</p>
 
 </div>
-
 </section>
 
 
@@ -192,28 +356,29 @@ target="_blank">WhatsApp करें</a>
 
 <div class="card">
 
-<h2>🔐 User Login</h2>
+<h2>🔐 Login</h2>
+
+<form id="loginForm">
 
 <label>Email</label>
-<input id="loginEmail" type="email" placeholder="Email">
+<input type="email" id="loginEmail" required>
 
 <label>Password</label>
-<input id="loginPassword" type="password" placeholder="Password">
+<input type="password" id="loginPassword" required>
 
-<button onclick="loginUser()">🔐 Login</button>
+<button class="primary" type="submit">
+Login करें
+</button>
 
-<button class="orange" onclick="forgotPassword()">
+</form>
+
+<br>
+
+<button class="warning" onclick="resetPassword()">
 🔑 Password भूल गए?
 </button>
 
-<button onclick="showPage('register')">
-नया Account बनाएँ
-</button>
-
-<p id="loginMsg"></p>
-
 </div>
-
 </section>
 
 
@@ -222,30 +387,24 @@ target="_blank">WhatsApp करें</a>
 
 <div class="card">
 
-<h2>🏠 User Dashboard</h2>
+<h2>👤 मेरा डैशबोर्ड</h2>
 
-<p id="welcomeUser"></p>
+<p id="userInfo"></p>
 
-<button class="green" onclick="showPage('newApplication')">
-📝 नया आवेदन
-</button>
+<br>
 
-<button onclick="loadApplications()">
-📋 मेरे आवेदन
-</button>
-
-<button class="red" onclick="logoutUser()">
-🚪 Logout
+<button class="primary" onclick="showSection('newApplication')">
+➕ नया आवेदन
 </button>
 
 </div>
 
-<div id="applications" class="card hidden">
+<div class="card">
 
 <h2>📋 मेरे आवेदन</h2>
 
-<div id="applicationList">
-लोड हो रहा है...
+<div id="myApplications">
+आवेदन लोड हो रहे हैं...
 </div>
 
 </div>
@@ -258,48 +417,131 @@ target="_blank">WhatsApp करें</a>
 
 <div class="card">
 
-<h2>📝 नया ऑनलाइन आवेदन</h2>
+<h2>📝 नया आवेदन</h2>
+
+<form id="applicationForm">
 
 <label>सेवा चुनें</label>
 
-<select id="serviceName">
+<select id="service" required>
 
 <option value="">-- सेवा चुनें --</option>
-<option>ऑनलाइन फॉर्म</option>
-<option>रोजगार / जॉब आवेदन</option>
-<option>छात्रवृत्ति आवेदन</option>
-<option>प्रमाण पत्र सहायता</option>
-<option>किसान सेवा</option>
-<option>धान पंजीयन</option>
-<option>SBM-G शौचालय सहायता</option>
-<option>दस्तावेज / PDF सेवा</option>
-<option>अन्य डिजिटल सेवा</option>
+
+<option value="SBM-G शौचालय सहायता">
+SBM-G शौचालय सहायता
+</option>
+
+<option value="धान पंजीयन">
+धान पंजीयन
+</option>
+
+<option value="किसान पंजीयन">
+किसान पंजीयन
+</option>
+
+<option value="समग्र KYC">
+समग्र KYC
+</option>
+
+<option value="आय प्रमाण पत्र">
+आय प्रमाण पत्र
+</option>
+
+<option value="जाति प्रमाण पत्र">
+जाति प्रमाण पत्र
+</option>
+
+<option value="निवास प्रमाण पत्र">
+निवास प्रमाण पत्र
+</option>
+
+<option value="अन्य ऑनलाइन सेवा">
+अन्य ऑनलाइन सेवा
+</option>
 
 </select>
 
-<label>आवेदक का नाम</label>
-<input id="appName" type="text">
+<label>नाम</label>
+<input type="text" id="appName" required>
 
 <label>मोबाइल नंबर</label>
-<input id="appMobile" type="tel">
-
-<label>समग्र ID</label>
-<input id="samagra" type="text">
+<input type="tel" id="appMobile" maxlength="10" required>
 
 <label>आवेदन की जानकारी</label>
-<textarea id="appDetails"
-rows="5"
-placeholder="अपने काम की पूरी जानकारी लिखें"></textarea>
+<textarea id="appDetails" rows="4"
+placeholder="आवेदन से संबंधित जानकारी लिखें"></textarea>
 
-<button class="green" onclick="submitApplication()">
-📤 आवेदन जमा करें
+<button class="success" type="submit">
+आवेदन जमा करें
 </button>
 
-<button onclick="showPage('dashboard')">
-⬅️ Dashboard
+</form>
+
+</div>
+
+</section>
+
+
+<!-- ADMIN LOGIN -->
+<section id="adminLogin" class="hidden">
+
+<div class="card">
+
+<h2>⚙️ Admin Login</h2>
+
+<p class="small">
+Admin के लिए Firebase Auth Email और Password से Login करें।
+</p>
+
+<input type="email" id="adminEmail"
+placeholder="Admin Email">
+
+<input type="password" id="adminPassword"
+placeholder="Admin Password">
+
+<button class="primary" onclick="adminLogin()">
+Admin Login
 </button>
 
-<p id="applicationMsg"></p>
+</div>
+
+</section>
+
+
+<!-- ADMIN DASHBOARD -->
+<section id="admin" class="hidden">
+
+<div class="card">
+
+<h2>⚙️ Admin Dashboard</h2>
+
+<p id="adminWelcome"></p>
+
+<button class="danger" onclick="adminLogout()">
+Admin Logout
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>🔎 User Applications</h2>
+
+<p class="small">
+किसी User की applications देखने के लिए उसका Firebase UID डालें।
+</p>
+
+<input
+type="text"
+id="searchUid"
+placeholder="User UID डालें">
+
+<button class="info" onclick="loadUserApplications()">
+आवेदन देखें
+</button>
+
+<div id="adminApplications">
+</div>
 
 </div>
 
@@ -308,12 +550,12 @@ placeholder="अपने काम की पूरी जानकारी �
 </div>
 
 
-<footer style="text-align:center;padding:25px">
+<footer>
 © 2026 Manish Digital Seva & AI Center
+<br>
+ढखरा, त्योंथर, रीवा (म.प्र.)
 </footer>
 
-
-<!-- FIREBASE -->
 
 <script type="module">
 
@@ -321,46 +563,51 @@ import { initializeApp }
 from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
 
 import {
- getAuth,
- createUserWithEmailAndPassword,
- signInWithEmailAndPassword,
- sendPasswordResetEmail,
- onAuthStateChanged,
- signOut,
- updateProfile
+getAuth,
+createUserWithEmailAndPassword,
+signInWithEmailAndPassword,
+sendPasswordResetEmail,
+onAuthStateChanged,
+signOut,
+updateProfile
 }
 from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
 
 import {
- getDatabase,
- ref,
- set,
- push,
- get
+getDatabase,
+ref,
+set,
+push,
+get,
+update
 }
 from "https://www.gstatic.com/firebasejs/12.1.0/firebase-database.js";
 
 
 const firebaseConfig = {
 
-apiKey:"AIzaSyBSuq65dtN7i4xRp1ln8Xlr_iJcWwFhXPw",
+apiKey: "AIzaSyBSuq65dtN7i4xRp1ln8Xlr_iJcWwFhXPw",
 
-authDomain:"manish-digital-sewa.firebaseapp.com",
+authDomain:
+"manish-digital-sewa.firebaseapp.com",
 
 databaseURL:
 "https://manish-digital-sewa-default-rtdb.asia-southeast1.firebasedatabase.app",
 
-projectId:"manish-digital-sewa",
+projectId:
+"manish-digital-sewa",
 
 storageBucket:
 "manish-digital-sewa.firebasestorage.app",
 
-messagingSenderId:"742662906265",
+messagingSenderId:
+"742662906265",
 
 appId:
 "1:742662906265:web:8ff3908e88418d07533308",
 
-measurementId:"G-6KDWJX8HKD"
+measurementId:
+"G-6KDWJX8HKD"
 
 };
 
@@ -372,73 +619,104 @@ const auth = getAuth(app);
 const db = getDatabase(app);
 
 
-/* PAGE */
+// आपकी Admin UID
+const ADMIN_UID =
+"E6uCxahpgKVNSLEKxoB6ghgvM3F3";
 
-window.showPage=function(page){
 
-document.querySelectorAll(
-"section"
-).forEach(x=>x.classList.add("hidden"));
+let currentUser = null;
 
-document.getElementById(page)
-.classList.remove("hidden");
+
+// -----------------------------
+// SECTION
+// -----------------------------
+
+window.showSection = function(id){
+
+document.querySelectorAll("section").forEach(section=>{
+section.classList.add("hidden");
+});
+
+const section =
+document.getElementById(id);
+
+if(section){
+section.classList.remove("hidden");
+}
 
 window.scrollTo(0,0);
+
 };
 
 
-/* REGISTER */
+// -----------------------------
+// MESSAGE
+// -----------------------------
 
-window.registerUser=async function(){
+function showMessage(text,type="success"){
 
-const name=
+const box =
+document.getElementById("message");
+
+box.innerText=text;
+
+box.style.display="block";
+
+if(type==="error"){
+box.style.background="#f8d7da";
+box.style.color="#842029";
+}else{
+box.style.background="#d1e7dd";
+box.style.color="#0f5132";
+}
+
+setTimeout(()=>{
+box.style.display="none";
+},5000);
+
+}
+
+
+// -----------------------------
+// REGISTER
+// -----------------------------
+
+document
+.getElementById("registerForm")
+.addEventListener("submit",async(e)=>{
+
+e.preventDefault();
+
+const name =
 document.getElementById("regName").value.trim();
 
-const mobile=
+const mobile =
 document.getElementById("regMobile").value.trim();
 
-const email=
+const email =
 document.getElementById("regEmail").value.trim();
 
-const password=
+const password =
 document.getElementById("regPassword").value;
-
-const msg=
-document.getElementById("registerMsg");
-
-
-if(!name || !mobile || !email || !password){
-
-msg.innerHTML="⚠️ सभी जानकारी भरें।";
-return;
-
-}
-
-if(password.length<6){
-
-msg.innerHTML=
-"⚠️ Password कम से कम 6 अक्षर का होना चाहिए।";
-
-return;
-
-}
 
 try{
 
-const result=
+const result =
 await createUserWithEmailAndPassword(
-auth,email,password
+auth,
+email,
+password
 );
 
-const user=result.user;
-
-await updateProfile(user,{
+await updateProfile(
+result.user,
+{
 displayName:name
-});
-
+}
+);
 
 await set(
-ref(db,"users/"+user.uid),
+ref(db,"users/"+result.user.uid),
 {
 name:name,
 mobile:mobile,
@@ -447,65 +725,88 @@ createdAt:Date.now()
 }
 );
 
-msg.innerHTML=
-"✅ Account सफलतापूर्वक बन गया।";
+showMessage(
+"Registration सफल हुआ। अब आप Login हैं।"
+);
 
-showPage("dashboard");
+document.getElementById("registerForm").reset();
+
+showSection("dashboard");
 
 }
 catch(error){
 
-msg.innerHTML=
-"❌ "+error.message;
+console.error(error);
+
+showMessage(
+"Registration Error: "+error.message,
+"error"
+);
 
 }
 
-};
+});
 
 
-/* LOGIN */
+// -----------------------------
+// LOGIN
+// -----------------------------
 
-window.loginUser=async function(){
+document
+.getElementById("loginForm")
+.addEventListener("submit",async(e)=>{
 
-const email=
+e.preventDefault();
+
+const email =
 document.getElementById("loginEmail").value.trim();
 
-const password=
+const password =
 document.getElementById("loginPassword").value;
-
-const msg=
-document.getElementById("loginMsg");
-
 
 try{
 
 await signInWithEmailAndPassword(
-auth,email,password
+auth,
+email,
+password
 );
 
-msg.innerHTML="✅ Login सफल।";
+showMessage("Login सफल हुआ।");
+
+showSection("dashboard");
 
 }
 catch(error){
 
-msg.innerHTML=
-"❌ Email या Password गलत है।";
+console.error(error);
+
+showMessage(
+"Login नहीं हुआ: "+error.message,
+"error"
+);
 
 }
 
-};
+});
 
 
-/* FORGOT PASSWORD */
+// -----------------------------
+// PASSWORD RESET
+// -----------------------------
 
-window.forgotPassword=async function(){
+window.resetPassword = async function(){
 
-const email=
+const email =
 document.getElementById("loginEmail").value.trim();
 
 if(!email){
 
-alert("पहले अपना Email लिखें।");
+showMessage(
+"पहले Email डालें।",
+"error"
+);
+
 return;
 
 }
@@ -513,120 +814,167 @@ return;
 try{
 
 await sendPasswordResetEmail(
-auth,email
+auth,
+email
 );
 
-alert(
-"✅ Password reset link आपके Email पर भेज दिया गया है।"
+showMessage(
+"Password reset link आपके Email पर भेज दिया गया है।"
 );
 
 }
 catch(error){
 
-alert("❌ Email नहीं मिला या गलती हुई।");
+showMessage(
+"Reset Error: "+error.message,
+"error"
+);
 
 }
 
 };
 
 
-/* LOGIN STATUS */
+// -----------------------------
+// AUTH STATE
+// -----------------------------
 
 onAuthStateChanged(auth,async(user)=>{
 
+currentUser=user;
+
+const dashboardBtn =
+document.getElementById("dashboardBtn");
+
+const logoutBtn =
+document.getElementById("logoutBtn");
+
+const adminBtn =
+document.getElementById("adminBtn");
+
 if(user){
 
-showPage("dashboard");
+dashboardBtn.classList.remove("hidden");
 
-let snap=
-await get(ref(db,"users/"+user.uid));
+logoutBtn.classList.remove("hidden");
 
-let data=snap.exists()
-?snap.val()
-:{};
+document
+.getElementById("userInfo")
+.innerHTML=
+"<b>नाम:</b> "+
+(user.displayName || "User")+
+"<br><b>Email:</b> "+
+user.email+
+"<br><b>UID:</b> "+
+user.uid;
 
-document.getElementById("welcomeUser").innerHTML=
-"नमस्ते <b>"+
-(data.name || user.displayName || "User")+
-"</b> 👋<br>"+
-(data.email || user.email);
+if(user.uid===ADMIN_UID){
+
+adminBtn.classList.remove("hidden");
+
+document
+.getElementById("adminWelcome")
+.innerHTML=
+"<b>Admin:</b> "+
+(user.displayName || user.email);
 
 }
-else{
 
-showPage("home");
+await loadMyApplications();
+
+}else{
+
+dashboardBtn.classList.add("hidden");
+
+logoutBtn.classList.add("hidden");
+
+adminBtn.classList.add("hidden");
 
 }
 
 });
 
 
-/* APPLICATION */
+// -----------------------------
+// LOGOUT
+// -----------------------------
 
-window.submitApplication=async function(){
+window.logoutUser = async function(){
 
-const user=auth.currentUser;
+await signOut(auth);
 
-if(!user){
+showMessage("Logout सफल हुआ।");
 
-alert("पहले Login करें।");
-showPage("login");
+showSection("home");
+
+};
+
+
+// -----------------------------
+// APPLICATION SUBMIT
+// -----------------------------
+
+document
+.getElementById("applicationForm")
+.addEventListener("submit",async(e)=>{
+
+e.preventDefault();
+
+if(!currentUser){
+
+showMessage(
+"पहले Login करें।",
+"error"
+);
+
+showSection("login");
+
 return;
 
 }
 
-const service=
-document.getElementById("serviceName").value;
+const service =
+document.getElementById("service").value;
 
-const name=
+const name =
 document.getElementById("appName").value.trim();
 
-const mobile=
+const mobile =
 document.getElementById("appMobile").value.trim();
 
-const samagra=
-document.getElementById("samagra").value.trim();
-
-const details=
+const details =
 document.getElementById("appDetails").value.trim();
 
-const msg=
-document.getElementById("applicationMsg");
 
+const today =
+new Date();
 
-if(!service || !name || !mobile || !details){
+const date =
+today.getFullYear().toString()+
+String(today.getMonth()+1).padStart(2,"0")+
+String(today.getDate()).padStart(2,"0");
 
-msg.innerHTML=
-"⚠️ जरूरी जानकारी भरें।";
-
-return;
-
-}
-
-
-/* Application ID */
-
-const now=new Date();
-
-const date=
-now.getFullYear()+
-String(now.getMonth()+1).padStart(2,"0")+
-String(now.getDate()).padStart(2,"0");
-
-const random=
+const random =
 Math.floor(1000+Math.random()*9000);
 
-const applicationNo=
+const applicationNo =
 "MDS-"+date+"-"+random;
 
 
-const applicationRef=
-push(ref(db,"applications/"+user.uid));
+try{
 
+const applicationRef =
+push(
+ref(db,"applications/"+currentUser.uid)
+);
 
-await set(applicationRef,{
+await set(
+applicationRef,
+{
 
 applicationNo:applicationNo,
+
+uid:currentUser.uid,
 
 service:service,
 
@@ -634,52 +982,68 @@ name:name,
 
 mobile:mobile,
 
-samagra:samagra,
-
 details:details,
 
 status:"Pending",
 
 createdAt:Date.now()
 
+}
+);
+
+showMessage(
+"आवेदन सफलतापूर्वक जमा हुआ। Application No: "+
+applicationNo
+);
+
+document
+.getElementById("applicationForm")
+.reset();
+
+await loadMyApplications();
+
+showSection("dashboard");
+
+}
+catch(error){
+
+console.error(error);
+
+showMessage(
+"आवेदन जमा नहीं हुआ: "+error.message,
+"error"
+);
+
+}
+
 });
 
 
-msg.innerHTML=
-"✅ आवेदन सफलतापूर्वक जमा हो गया।<br><br>"+
-"आपका Application Number:<br>"+
-"<b style='font-size:22px'>"+
-applicationNo+
-"</b>";
+// -----------------------------
+// USER APPLICATIONS
+// -----------------------------
 
-};
+async function loadMyApplications(){
 
+if(!currentUser) return;
 
-/* APPLICATION LIST */
+const box =
+document.getElementById("myApplications");
 
-window.loadApplications=async function(){
+box.innerHTML=
+"आवेदन लोड हो रहे हैं...";
 
-const user=auth.currentUser;
+try{
 
-if(!user)return;
-
-const box=
-document.getElementById("applicationList");
-
-box.innerHTML="लोड हो रहा है...";
-
-const snapshot=
+const snapshot =
 await get(
-ref(db,"applications/"+user.uid)
+ref(db,"applications/"+currentUser.uid)
 );
 
 if(!snapshot.exists()){
 
 box.innerHTML=
-"अभी कोई आवेदन नहीं मिला।";
-
-document.getElementById("applications")
-.classList.remove("hidden");
+"<p>अभी कोई आवेदन नहीं है।</p>";
 
 return;
 
@@ -689,66 +1053,366 @@ let html="";
 
 snapshot.forEach(child=>{
 
-const a=child.val();
+const appData=child.val();
 
-let cls="pending";
-
-if(a.status==="Processing")
-cls="processing";
-
-if(a.status==="Completed")
-cls="completed";
-
-if(a.status==="Rejected")
-cls="rejected";
-
-
-html+=`
-
-<div class="appbox">
-
-<b>Application No:</b>
-${a.applicationNo}<br><br>
-
-<b>सेवा:</b>
-${a.service}<br>
-
-<b>नाम:</b>
-${a.name}<br>
-
-<b>मोबाइल:</b>
-${a.mobile}<br><br>
-
-<b>Status:</b>
-<span class="status ${cls}">
-${a.status}
-</span>
-
-</div>
-
-`;
+html+=createApplicationHTML(
+appData,
+child.key,
+false
+);
 
 });
 
 box.innerHTML=html;
 
-document.getElementById("applications")
-.classList.remove("hidden");
+}
+catch(error){
+
+console.error(error);
+
+box.innerHTML=
+"<p>आवेदन लोड नहीं हो सके।</p>";
+
+}
+
+}
+
+
+// -----------------------------
+// APPLICATION HTML
+// -----------------------------
+
+function createApplicationHTML(data,id,isAdmin){
+
+let statusClass="pending";
+
+if(data.status==="Processing")
+statusClass="processing";
+
+if(data.status==="Completed")
+statusClass="completed";
+
+if(data.status==="Rejected")
+statusClass="rejected";
+
+
+let adminControls="";
+
+if(isAdmin){
+
+adminControls=`
+
+<hr>
+
+<label><b>Status बदलें</b></label>
+
+<select id="status-${id}">
+
+<option value="Pending"
+${data.status==="Pending"?"selected":""}>
+Pending
+</option>
+
+<option value="Processing"
+${data.status==="Processing"?"selected":""}>
+Processing
+</option>
+
+<option value="Completed"
+${data.status==="Completed"?"selected":""}>
+Completed
+</option>
+
+<option value="Rejected"
+${data.status==="Rejected"?"selected":""}>
+Rejected
+</option>
+
+</select>
+
+<button class="success"
+onclick="updateApplicationStatus('${id}')">
+💾 Status Save
+</button>
+
+`;
+
+}
+
+return `
+
+<div class="appbox">
+
+<h3>${data.service || "सेवा"}</h3>
+
+<p>
+<b>Application No:</b>
+${data.applicationNo || id}
+</p>
+
+<p>
+<b>नाम:</b>
+${data.name || ""}
+</p>
+
+<p>
+<b>मोबाइल:</b>
+${data.mobile || ""}
+</p>
+
+<p>
+<b>जानकारी:</b>
+${data.details || "-"}
+</p>
+
+<p>
+<b>Status:</b>
+<span class="status ${statusClass}">
+${data.status || "Pending"}
+</span>
+</p>
+
+${adminControls}
+
+</div>
+
+`;
+
+}
+
+
+// -----------------------------
+// ADMIN LOGIN
+// -----------------------------
+
+window.adminLogin = async function(){
+
+const email =
+document.getElementById("adminEmail").value.trim();
+
+const password =
+document.getElementById("adminPassword").value;
+
+if(!email || !password){
+
+showMessage(
+"Email और Password डालें।",
+"error"
+);
+
+return;
+
+}
+
+try{
+
+const result =
+await signInWithEmailAndPassword(
+auth,
+email,
+password
+);
+
+if(result.user.uid!==ADMIN_UID){
+
+await signOut(auth);
+
+showMessage(
+"यह Account Admin नहीं है।",
+"error"
+);
+
+return;
+
+}
+
+showMessage("Admin Login सफल हुआ।");
+
+showSection("admin");
+
+}
+catch(error){
+
+console.error(error);
+
+showMessage(
+"Admin Login Error: "+error.message,
+"error"
+);
+
+}
 
 };
 
 
-/* LOGOUT */
+// -----------------------------
+// ADMIN LOAD USER APPLICATIONS
+// -----------------------------
 
-window.logoutUser=async function(){
+window.loadUserApplications = async function(){
+
+if(!currentUser ||
+currentUser.uid!==ADMIN_UID){
+
+showMessage(
+"Admin Login आवश्यक है।",
+"error"
+);
+
+return;
+
+}
+
+const uid =
+document.getElementById("searchUid").value.trim();
+
+if(!uid){
+
+showMessage(
+"User UID डालें।",
+"error"
+);
+
+return;
+
+}
+
+const box =
+document.getElementById("adminApplications");
+
+box.innerHTML=
+"Applications लोड हो रही हैं...";
+
+try{
+
+const snapshot =
+await get(
+ref(db,"applications/"+uid)
+);
+
+if(!snapshot.exists()){
+
+box.innerHTML=
+"<p>इस User की कोई application नहीं मिली।</p>";
+
+return;
+
+}
+
+let html="";
+
+snapshot.forEach(child=>{
+
+html+=createApplicationHTML(
+child.val(),
+child.key,
+true
+);
+
+});
+
+box.innerHTML=html;
+
+}
+catch(error){
+
+console.error(error);
+
+box.innerHTML=
+"<p>Applications नहीं पढ़ी जा सकीं: "+
+error.message+
+"</p>";
+
+}
+
+};
+
+
+// -----------------------------
+// ADMIN UPDATE STATUS
+// -----------------------------
+
+window.updateApplicationStatus = async function(appId){
+
+if(!currentUser ||
+currentUser.uid!==ADMIN_UID){
+
+showMessage(
+"Admin Login आवश्यक है।",
+"error"
+);
+
+return;
+
+}
+
+const uid =
+document.getElementById("searchUid").value.trim();
+
+if(!uid){
+
+showMessage(
+"User UID नहीं मिला।",
+"error"
+);
+
+return;
+
+}
+
+const select =
+document.getElementById("status-"+appId);
+
+const newStatus =
+select.value;
+
+try{
+
+await update(
+ref(db,"applications/"+uid+"/"+appId),
+{
+status:newStatus,
+updatedAt:Date.now()
+}
+);
+
+showMessage(
+"Application Status अपडेट हो गया: "+
+newStatus
+);
+
+await loadUserApplications();
+
+}
+catch(error){
+
+console.error(error);
+
+showMessage(
+"Status Update Error: "+error.message,
+"error"
+);
+
+}
+
+};
+
+
+// -----------------------------
+// ADMIN LOGOUT
+// -----------------------------
+
+window.adminLogout = async function(){
 
 await signOut(auth);
 
-showPage("home");
+showMessage("Admin Logout सफल हुआ।");
+
+showSection("home");
 
 };
 
 </script>
 
 </body>
-  </html>
+ </html>
