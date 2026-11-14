@@ -1,1 +1,211 @@
- 
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manish Digital Seva & AI Center</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:Arial,sans-serif;
+ background:#f3f6ff;
+ color:#18233b;
+}
+.top{
+ background:linear-gradient(120deg,#101d43,#234fc2,#7c3aed);
+ color:white;
+ padding:25px 15px;
+}
+.wrap{max-width:1180px;margin:auto}
+.brand{
+ display:flex;
+ gap:18px;
+ align-items:center;
+ flex-wrap:wrap;
+}
+.avatar{
+ width:115px;
+ height:115px;
+ border-radius:50%;
+ object-fit:cover;
+ border:4px solid white;
+}
+.brand h1{margin:0;font-size:28px}
+.brand p{margin:7px 0}
+.contact{
+ display:inline-block;
+ background:#16a34a;
+ color:white;
+ padding:10px 18px;
+ border-radius:25px;
+ text-decoration:none;
+ font-weight:bold;
+}
+.hero{padding-top:22px}
+.toolbar{
+ display:flex;
+ gap:10px;
+ margin:20px 0;
+ flex-wrap:wrap;
+}
+.search,.select{
+ padding:14px;
+ border:1px solid #ddd;
+ border-radius:12px;
+ font-size:16px;
+}
+.search{flex:1;min-width:220px}
+.categories{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(155px,1fr));
+ gap:12px;
+}
+.cat{
+ border:0;
+ border-radius:17px;
+ padding:18px;
+ color:white;
+ text-align:left;
+ min-height:105px;
+ cursor:pointer;
+ font-size:15px;
+ font-weight:bold;
+}
+.cat span{font-size:26px;display:block;margin-bottom:10px}
+.cards{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(225px,1fr));
+ gap:14px;
+ margin:20px 0 30px;
+}
+.card{
+ background:white;
+ border:1px solid #e4eaf5;
+ border-radius:17px;
+ padding:17px;
+ display:flex;
+ flex-direction:column;
+ min-height:170px;
+ box-shadow:0 5px 16px #17255412;
+}
+.tag{
+ font-size:12px;
+ color:#4f46e5;
+ background:#eef2ff;
+ padding:6px 9px;
+ border-radius:20px;
+ align-self:flex-start;
+}
+.card h3{font-size:17px}
+.card p{font-size:13px;color:#64748b;flex:1}
+.actions{display:flex;gap:8px}
+.btn{
+ padding:11px;
+ border-radius:10px;
+ text-decoration:none;
+ text-align:center;
+ font-weight:bold;
+ font-size:13px;
+}
+.wa{background:#16a34a;color:white;flex:1}
+.info{background:#edf2ff;color:#2548a5}
+.notice{
+ background:#fff7df;
+ padding:15px;
+ border-radius:12px;
+ margin:20px 0;
+ font-size:13px;
+ line-height:1.7;
+}
+.footer{
+ background:#101d43;
+ color:white;
+ text-align:center;
+ padding:25px;
+}
+.float{
+ position:fixed;
+ right:15px;
+ bottom:18px;
+ background:#16a34a;
+ color:white;
+ padding:15px 20px;
+ border-radius:30px;
+ text-decoration:none;
+ font-weight:bold;
+}
+@media(max-width:520px){
+ .avatar{width:90px;height:90px}
+ .brand h1{font-size:22px}
+ .categories{grid-template-columns:repeat(2,1fr)}
+ .cards{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header class="top">
+<div class="wrap">
+
+<div class="brand">
+
+<img class="avatar" src="owner.jpg" alt="Owner Photo">
+
+<div>
+<h1>MANISH DIGITAL SEVA</h1>
+<p>& AI CENTER</p>
+<p><b>मनीष पाल | Owner</b></p>
+<p>ग्राम ढखरा, तहसील त्योंथर, जिला रीवा, मध्य प्रदेश</p>
+
+<a class="contact"
+href="https://wa.me/916260988021"
+target="_blank">
+🟢 WhatsApp: 6260988021
+</a>
+
+</div>
+</div>
+
+<div class="hero">
+<h2>आपका अपना डिजिटल सेवा केंद्र</h2>
+<p>मध्य प्रदेश की ऑनलाइन सेवाओं की जानकारी और WhatsApp से बुकिंग</p>
+</div>
+
+</div>
+</header>
+
+<main class="wrap" style="padding:0 15px">
+
+<div class="toolbar">
+<input id="search" class="search"
+placeholder="🔎 सेवा या योजना खोजें...">
+
+<select id="filter" class="select">
+<option value="">सभी कैटेगरी</option>
+</select>
+</div>
+
+<h2>🎨 सेवा कैटेगरी</h2>
+<div id="categories" class="categories"></div>
+
+<h2 id="listTitle">📋 सभी ऑनलाइन सेवाएँ</h2>
+<span id="count"></span>
+
+<div id="cards" class="cards"></div>
+
+<div class="notice">
+<b>महत्वपूर्ण सूचना:</b>
+यह पोर्टल सेवा संबंधी जानकारी और बुकिंग सहायता के लिए है।
+योजनाओं की पात्रता एवं आवेदन स्वीकृति संबंधित सरकारी विभाग के नियमों पर निर्भर करेगी।
+</div>
+
+</main>
+
+<footer class="footer">
+<h3>MANISH DIGITAL SEVA & AI CENTER</h3>
+Owner: Manish Pal<br>
+WhatsApp: 6260988021<br>
+ग्राम ढखरा, त्योंथर, रीवा, मध्य
