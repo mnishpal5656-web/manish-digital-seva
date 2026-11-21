@@ -15,4 +15,16 @@ const catBox=document.getElementById('categories'), filter=document.getElementBy
 cats.forEach((c,i)=>{let o=document.createElement('option');o.value=c;o.textContent=c;filter.append(o);let b=document.createElement('button');b.className='cat';b.style.background=colors[i%colors.length];b.innerHTML=`<span>${icons[i%icons.length]}</span><b>${c}</b>`;b.onclick=()=>{selected=selected===c?'':c;filter.value=selected;render();document.getElementById('listTitle').scrollIntoView({behavior:'smooth',block:'start'})};catBox.append(b)});
 function render(){let q=document.getElementById('search').value.trim().toLowerCase();let f=filter.value;let rows=services.filter(s=>(!f||s.category===f)&&(!q||(s.name+' '+s.category).toLowerCase().includes(q)));document.getElementById('count').textContent=`${rows.length} सेवाएँ`;document.getElementById('listTitle').textContent=f?`📋 ${f}`:'📋 सभी ऑनलाइन सेवाएँ';let box=document.getElementById('cards');box.innerHTML='';if(!rows.length){box.innerHTML='<div class="empty">कोई सेवा नहीं मिली। दूसरा नाम खोजें।</div>';return}rows.forEach(s=>{let msg=`Namaste, mujhe ${s.name} ke liye booking karani hai. Kripya jankari dein.`;let wa='https://wa.me/916260988021?text='+encodeURIComponent(msg);let el=document.createElement('article');el.className='card';el.innerHTML=`<span class="tag">${s.category}</span><h3>${s.name}</h3><p>इस सेवा की पात्रता, जरूरी दस्तावेज और प्रक्रिया जानने के लिए WhatsApp पर संपर्क करें।</p><div class="actions"><a class="btn info" href="${wa}" target="_blank">जानकारी लें</a><a class="btn wa" href="${wa}" target="_blank">🟢 बुक करें</a></div>`;box.append(el)})}
 document.getElementById('search').addEventListener('input',render);filter.addEventListener('change',()=>{selected=filter.value;render()});render();
-</script></body></html>
+</script></body><div style="
+background:#fff3cd;
+color:#856404;
+border:2px solid #ffc107;
+padding:12px;
+margin:10px;
+border-radius:10px;
+text-align:center;
+font-weight:bold;
+font-size:16px;">
+📢 महत्वपूर्ण सूचना<br>
+आप किसी भी सेवा पर क्लिक करेंगे, तो आपकी जानकारी प्राप्त होने के बाद Manish Digital Seva द्वारा आपसे संपर्क किया जाएगा।
+</div></html>
